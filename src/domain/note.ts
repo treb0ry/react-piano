@@ -19,3 +19,5 @@ const B5_MIDI_NUMBER = 83;
 export const LOWER_NOTE = C4_MIDI_NUMBER;
 export const HIGHT_NOTE = B5_MIDI_NUMBER;
 export const SEMITONES_IN_OCTAVE = 12;
+
+export const NATURAL_PITCH_INDICES: PitchIndex[] = [0, 2, 4, 5, 7, 9, 11];
