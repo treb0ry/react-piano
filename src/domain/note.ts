@@ -46,3 +46,19 @@ export function fromMidi(midi: MidiValue): Note {
   const type = isSharp ? "sharp" : "natural";
   return { octave, pitch, index, type, midi };
 }
+
+interface NoteGeneratorSettings {
+  fromNote?: MidiValue;
+  toNote?: MidiValue;
+}
+
+export function generateNotes({
+  fromNote = LOWER_NOTE,
+  toNote = HIGHT_NOTE,
+}: NoteGeneratorSettings = {}): Note[] {
+  return Array(toNote - fromNote + 1)
+    .fill(0)
+    .map((_, index: number) => fromMidi(fromNote + index));
+}
+
+export const notes = generateNotes();
