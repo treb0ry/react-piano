@@ -27,8 +27,7 @@
   z-index: 2;
 }
 
-.key--natural:active,
-.key--natural.is-pressed {
+.key--natural:active {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
