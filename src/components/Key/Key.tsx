@@ -23,7 +23,6 @@ export const Key: FunctionComponent<KeyProps> = (props) => {
     onStartPress: onDown,
     onFinishPress: onUp,
   });
-  console.log(pressed);
   return (
     <button
       className={clsx(`key key--${type}`, pressed && "is-pressed")}
